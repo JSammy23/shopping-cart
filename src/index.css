@@ -20,6 +20,11 @@ body {
   height: auto;
 }
 
+.flex {
+  display: flex;
+  justify-content: space-around;
+}
+
 /* Header Styling */
 
 .cartIcon {
@@ -58,4 +63,29 @@ header {
 
 .title {
   color: var(--ac-pink);
+}
+
+/* Home Styling */
+
+.overlay {
+  background-color: rgba(0, 0, 0, .7);
+  padding: 2em;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  
+}
+
+.gradient-text {
+  background-image: linear-gradient(to right, #ef2562, #2c4de2, #ef2562);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  font-size: 5em;
+  
+} 
+
+.home {
+  padding-top: 15em;
 }
