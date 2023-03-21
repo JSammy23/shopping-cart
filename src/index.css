@@ -3,3 +3,33 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+/* General Styles */
+
+/* Header Styling */
+
+.cartIcon {
+  font-size: 1.5em;
+  cursor: pointer;
+}
+
+li {
+  list-style: none;
+  font-size: 1.5em;
+  cursor: pointer;
+}
+
+header,
+ul {
+  display: flex;
+  justify-content: space-between;
+  gap: 2em;
+  
+}
+
+header {
+  padding: 1.5em;
+  background-color: black;
+  align-items: center;
+  color: #fff;
+}
