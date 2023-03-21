@@ -8,8 +8,8 @@ const Header = ({ title }) => {
         <h1 className='title' >{title}</h1>
         <nav>
             <ul>
-                <li>Home</li>
-                <li>Shop</li>
+                <li className='even'>Home</li>
+                <li className='odd' >Shop</li>
             </ul>
         </nav>
         <FontAwesomeIcon className='cartIcon' icon={faShoppingCart} />

@@ -1,3 +1,9 @@
+:root {
+  --black: #000000;
+  --ac-blue: #2b3f99;
+  --ac-pink: #d21d52;
+}
+
 *, *::before, *::after {
   margin: 0;
   padding: 0;
@@ -6,17 +12,33 @@
 
 /* General Styles */
 
+body {
+  background-image: url(../src/assets/images/hex.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+  height: auto;
+}
+
 /* Header Styling */
 
 .cartIcon {
   font-size: 1.5em;
   cursor: pointer;
+  color: var(--ac-blue);
 }
 
 li {
   list-style: none;
   font-size: 1.5em;
   cursor: pointer;
+}
+
+.even {
+  color: var(--ac-blue);
+}
+.odd {
+  color: var(--ac-pink);
 }
 
 header,
@@ -32,4 +54,8 @@ header {
   background-color: black;
   align-items: center;
   color: #fff;
+}
+
+.title {
+  color: var(--ac-pink);
 }
