@@ -20,6 +20,11 @@ body {
   height: auto;
 }
 
+body::-webkit-scrollbar {
+  width: 0px;
+  background-color: transparent;
+}
+
 .flex {
   display: flex;
   justify-content: space-around;
@@ -98,4 +103,7 @@ header {
 
 .cardCont {
   display: flex;
+  flex-wrap: wrap;
+  overflow: hidden;
 }
+
