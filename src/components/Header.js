@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {faShoppingCart} from '@fortawesome/fontawesome-free-solid'
 import { Link } from 'react-router-dom'
 
-const Header = ({ title }) => {
+const Header = ({ title, handleClick }) => {
   return (
     <header>
         <h1 className='title' >{title}</h1>
@@ -17,7 +17,8 @@ const Header = ({ title }) => {
                 </li>
             </ul>
         </nav>
-        <FontAwesomeIcon className='cartIcon' icon={faShoppingCart} />
+        <FontAwesomeIcon className='cartIcon' icon={faShoppingCart}
+        onClick={handleClick} />
     </header>
   )
 }
