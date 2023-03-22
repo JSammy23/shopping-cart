@@ -8,6 +8,8 @@ import Cart from "./components/Cart";
 function App() {
 
   const [isCartOpen, setIsCartOpen] = useState(false);
+  
+  const [cartItems, setCartItems] = useState([]);
 
   const handleCartClick = () => {
     setIsCartOpen(!isCartOpen);
@@ -18,14 +20,25 @@ function App() {
     setIsCartOpen(false)
   };
 
+  const handleAddToCart = (item) => {
+    setCartItems([...cartItems, item]);
+  };
+
+  const handleRemoveFromCart = (itemId) => {
+    setCartItems(cartItems.filter((item) => item.id !== itemId));
+  };
+
   return (
     <>
       <Header title='Psuedo Shop' handleClick={handleCartClick} />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/shop" element={<Shop />} />
+        <Route path="/shop" element={<Shop 
+        addItem={handleAddToCart} removeItem={handleRemoveFromCart} />} />
       </Routes>
-      <Cart isOpen={isCartOpen} handleCloseCart={handleCloseCart} />
+      <Cart isOpen={isCartOpen} handleCloseCart={handleCloseCart}
+      addItem={handleAddToCart} removeItem={handleRemoveFromCart}
+      cartItems={cartItems} />
     </>
   );
 }

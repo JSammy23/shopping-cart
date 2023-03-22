@@ -1,7 +1,7 @@
 import React from 'react'
 import '../components/styles/Cart.Styles.css'
 
-const Cart = ({ isOpen, handleCloseCart}) => {
+const Cart = ({ isOpen, handleCloseCart, addItem, removeItem, cartItems}) => {
 
     const cartClass = isOpen ? 'cart open' : 'cart'
     
@@ -15,7 +15,7 @@ const Cart = ({ isOpen, handleCloseCart}) => {
             <h2>Your Shopping Cart</h2>
             <button className='pulse' onClick={handleCartClose}>Close</button>
         </div>
-        {/* cart items listed here */}
+        {/* cart items listed here in tile form */}
     </div>
   )
 }
