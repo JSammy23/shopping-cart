@@ -1,6 +1,7 @@
 import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {faShoppingCart} from '@fortawesome/fontawesome-free-solid'
+import { Link } from 'react-router-dom'
 
 const Header = ({ title }) => {
   return (
@@ -8,8 +9,12 @@ const Header = ({ title }) => {
         <h1 className='title' >{title}</h1>
         <nav>
             <ul>
-                <li className='even'>Home</li>
-                <li className='odd' >Shop</li>
+                <li>
+                    <Link className='even' to='/' >Home</Link>
+                </li>
+                <li >
+                    <Link className='odd' to='/shop' >Shop</Link>
+                </li>
             </ul>
         </nav>
         <FontAwesomeIcon className='cartIcon' icon={faShoppingCart} />

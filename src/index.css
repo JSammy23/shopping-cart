@@ -39,6 +39,10 @@ li {
   cursor: pointer;
 }
 
+a {
+  text-decoration: none;
+}
+
 .even {
   color: var(--ac-blue);
 }
@@ -74,7 +78,7 @@ header {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  
+  align-items: center;
 }
 
 .gradient-text {
