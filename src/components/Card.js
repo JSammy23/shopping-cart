@@ -1,15 +1,21 @@
-import React, { useState } from 'react'
+import React from 'react'
+import '../components/styles/Card.Styles.css'
 
-const Card = ({ title, image }) => {
+const Card = ({ title, image, price }) => {
 
   
 
   return (
-    <div className='card' >
-        <img src={image} alt="Character" className='card-img' />
-        <h2 className='title'>{title}</h2>
-        <button className='addBtn'>Add To Cart</button>
-    </div>
+    <>
+      <div className="cardCont">
+        <div className='card' >
+          <img  src={image} alt="Character" className='card-img' />
+          <h2 className='title'>{title}</h2>
+          <p className='price'>${price}</p>
+          <button className='addBtn'>Add To Cart</button>
+        </div>
+      </div>
+    </>
   )
 }
 

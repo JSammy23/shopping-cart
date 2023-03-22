@@ -93,3 +93,9 @@ header {
 .home {
   padding-top: 15em;
 }
+
+/* Shop Styling */
+
+.cardCont {
+  display: flex;
+}
