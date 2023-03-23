@@ -120,3 +120,12 @@ header {
   padding: 1em 0;
   font-size: 1.2em;
 }
+
+.tile-info {
+  color: #fff;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 2em;
+  margin: 1em 0;
+}

@@ -19,7 +19,7 @@ const Cart = ({ isOpen, handleCloseCart, addItem, removeItem, cartItems}) => {
         {/* cart items listed here in tile form */}
         <div className="cart-items">
             {cartItems.map((item) => (
-                <Tile item={item} />
+                <Tile item={item} removeItem={removeItem} />
             ))}
         </div>
     </div>
