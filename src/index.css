@@ -107,3 +107,16 @@ header {
   overflow: hidden;
 }
 
+/* Tile Styling */
+
+.tile {
+  color: #fff;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 2em;
+  border-top: 1px solid var(--ac-blue);
+  border-bottom: 1px solid var(--ac-pink);
+  padding: 1em 0;
+  font-size: 1.2em;
+}

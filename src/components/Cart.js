@@ -1,5 +1,6 @@
 import React from 'react'
 import '../components/styles/Cart.Styles.css'
+import Tile from './Tile'
 
 const Cart = ({ isOpen, handleCloseCart, addItem, removeItem, cartItems}) => {
 
@@ -16,6 +17,11 @@ const Cart = ({ isOpen, handleCloseCart, addItem, removeItem, cartItems}) => {
             <button className='pulse' onClick={handleCartClose}>Close</button>
         </div>
         {/* cart items listed here in tile form */}
+        <div className="cart-items">
+            {cartItems.map((item) => (
+                <Tile item={item} />
+            ))}
+        </div>
     </div>
   )
 }
