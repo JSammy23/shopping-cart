@@ -7,7 +7,9 @@ const Header = ({ title, handleClick, cartItems, isShaking }) => {
 
   return (
     <header>
-        <h1 className='title' >{title}</h1>
+        <Link to='/'>
+            <h1 className='title' >{title}</h1>
+        </Link>
         <nav>
             <ul>
                 <li>
