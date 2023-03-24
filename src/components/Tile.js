@@ -24,9 +24,11 @@ const Tile = ({ item, removeItem, quantity, updateQuantity }) => {
             </div>
             <div className="tile-info">
                 <p>Quantity: {quantity}</p>
-                <button onClick={handleRemoveClick}>Remove</button>
-                <button onClick={handleDecreaseClick}>-</button>
-                <button onClick={handleIncreaseClick}>+</button>
+                <div>
+                    <button className='tileBtn' onClick={handleRemoveClick}>Remove</button>
+                    <button className='tileBtn' onClick={handleDecreaseClick}>-</button>
+                    <button className='tileBtn' onClick={handleIncreaseClick}>+</button>
+                </div>
             </div>
         </div>
     </div>

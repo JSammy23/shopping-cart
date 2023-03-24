@@ -149,3 +149,13 @@ header {
   gap: 2em;
   margin: 1em 0;
 }
+
+.tileBtn {
+  border: 2px solid var(--clr-neon);
+  background-color: transparent;
+  outline: none;
+  padding: .5em;
+  color: var(--clr-neon);
+  cursor: pointer;
+  margin-right: .2em;
+}
