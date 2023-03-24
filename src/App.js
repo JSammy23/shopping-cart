@@ -10,6 +10,7 @@ function App() {
   const [isCartOpen, setIsCartOpen] = useState(false);
   
   const [cartItems, setCartItems] = useState([]);
+  const [isShaking, setIsShaking] = useState(false)
 
   const handleCartClick = () => {
     setIsCartOpen(!isCartOpen);
@@ -22,6 +23,11 @@ function App() {
 
   const handleAddToCart = (item) => {
     setCartItems([...cartItems, item]);
+
+    setIsShaking(true);
+    setTimeout(() => {
+      setIsShaking(false);
+    }, 500);
   };
 
   const handleRemoveFromCart = (itemId) => {
@@ -30,7 +36,7 @@ function App() {
 
   return (
     <>
-      <Header title='Psuedo Shop' handleClick={handleCartClick} />
+      <Header title='Psuedo Shop' handleClick={handleCartClick} cartItems={cartItems} isShaking={isShaking} />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/shop" element={<Shop 
