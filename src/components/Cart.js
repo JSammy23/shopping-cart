@@ -22,6 +22,10 @@ const Cart = ({ isOpen, handleCloseCart, addItem, removeItem, cartItems, updateQ
                 <Tile key={item.id} item={item} quantity={item.quantity} removeItem={removeItem} updateQuantity={updateQuantity} />
             ))}
         </div>
+        <div className="cart-total">
+            {/* <button>Check Out Now ({total})</button> */}
+            <button className='checkoutBtn cancel' >Close</button>
+        </div>
     </div>
   )
 }

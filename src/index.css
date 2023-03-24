@@ -121,8 +121,7 @@ header {
 } 
 
 .home {
-  padding-top: 15em;
-  padding-bottom: 3em;
+  padding: 12em 2em 3em 2em;
 }
 
 /* Shop Styling */
@@ -131,6 +130,8 @@ header {
   display: flex;
   flex-wrap: wrap;
   overflow: hidden;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 /* Tile Styling */
