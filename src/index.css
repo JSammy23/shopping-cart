@@ -41,7 +41,6 @@ body::-webkit-scrollbar {
 
 .active {
   color: var(--clr-neon);
-  
 }
 
 .shake {

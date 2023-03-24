@@ -5,12 +5,16 @@ import Shop from "./pages/Shop";
 import { useState } from "react";
 import Cart from "./components/Cart";
 
+
+
 function App() {
 
+  // Sate
   const [isCartOpen, setIsCartOpen] = useState(false);
-  
   const [cartItems, setCartItems] = useState([]);
   const [isShaking, setIsShaking] = useState(false)
+
+  
 
   const handleCartClick = () => {
     setIsCartOpen(!isCartOpen);
@@ -22,12 +26,30 @@ function App() {
   };
 
   const handleAddToCart = (item) => {
-    setCartItems([...cartItems, item]);
-
+    const existingItem = cartItems.find((cartItem) => cartItem.id === item.id);
+    if (existingItem) {
+      const updatedCartItems = cartItems.map((cartItem) =>
+        cartItem.id === item.id ? { ...cartItem, quantity: cartItem.quantity + 1 } : cartItem
+      );
+      setCartItems(updatedCartItems);
+    } else {
+      setCartItems([...cartItems, { ...item, quantity: 1 }]);
+    }
     setIsShaking(true);
     setTimeout(() => {
       setIsShaking(false);
     }, 500);
+  };
+
+  const updateQuantity = (id, newQuantity) => {
+    const updatedCartItems = cartItems.map((item) => {
+      if (item.id === id) {
+        return { ...item, quantity: newQuantity };
+      } else {
+        return item;
+      }
+    });
+    setCartItems(updatedCartItems);
   };
 
   const handleRemoveFromCart = (itemId) => {
@@ -36,7 +58,7 @@ function App() {
 
   return (
     <>
-      <Header title='Psuedo Shop' handleClick={handleCartClick} cartItems={cartItems} isShaking={isShaking} />
+      <Header title='Psuedo Shop' handleClick={handleCartClick} cartItems={cartItems} isShaking={isShaking}  />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/shop" element={<Shop 
@@ -44,7 +66,7 @@ function App() {
       </Routes>
       <Cart isOpen={isCartOpen} handleCloseCart={handleCloseCart}
       addItem={handleAddToCart} removeItem={handleRemoveFromCart}
-      cartItems={cartItems} />
+      cartItems={cartItems} updateQuantity={updateQuantity} />
     </>
   );
 }
