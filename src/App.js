@@ -4,6 +4,7 @@ import Home from '../src/pages/Home';
 import Shop from "./pages/Shop";
 import { useState } from "react";
 import Cart from "./components/Cart";
+import Footer from "./components/Footer";
 
 
 
@@ -64,6 +65,7 @@ function App() {
         <Route path="/shop" element={<Shop 
         addItem={handleAddToCart} removeItem={handleRemoveFromCart} />} />
       </Routes>
+      <Footer />
       <Cart isOpen={isCartOpen} handleCloseCart={handleCloseCart}
       addItem={handleAddToCart} removeItem={handleRemoveFromCart}
       cartItems={cartItems} updateQuantity={updateQuantity} />

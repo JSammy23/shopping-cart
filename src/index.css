@@ -12,12 +12,17 @@
 
 /* General Styles */
 
+html {
+  position: relative;
+  min-height: 100%
+}
+
 body {
   background-image: url(../src/assets/images/hex.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  min-height: 100vh;
-  height: auto;
+  height: 100%;
+  margin-bottom: 3.5rem;
 }
 
 body::-webkit-scrollbar {
@@ -117,6 +122,7 @@ header {
 
 .home {
   padding-top: 15em;
+  padding-bottom: 3em;
 }
 
 /* Shop Styling */
