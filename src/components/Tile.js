@@ -7,6 +7,9 @@ const Tile = ({ item, removeItem, quantity, updateQuantity }) => {
     };
 
     const handleDecreaseClick = () => {
+        if (quantity === 1) {
+            return;
+        }
         updateQuantity(item.id, quantity - 1);
     };
     
