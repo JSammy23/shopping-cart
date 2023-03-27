@@ -2,7 +2,7 @@ import React from 'react'
 import '../components/styles/Cart.Styles.css'
 import Tile from './Tile'
 
-const Cart = ({ isOpen, handleCloseCart, addItem, removeItem, cartItems, updateQuantity}) => {
+const Cart = ({ isOpen, handleCloseCart, addItem, removeItem, cartItems, updateQuantity, totalPrice}) => {
 
     const cartClass = isOpen ? 'cart open' : 'cart'
     
@@ -23,8 +23,7 @@ const Cart = ({ isOpen, handleCloseCart, addItem, removeItem, cartItems, updateQ
             ))}
         </div>
         <div className="cart-total">
-            {/* <button>Check Out Now ({total})</button> */}
-            <button className='checkoutBtn cancel' >Close</button>
+            <button className='checkoutBtn' >Check Out Now (${totalPrice})</button>
         </div>
     </div>
   )

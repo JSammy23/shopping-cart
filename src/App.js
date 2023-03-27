@@ -15,6 +15,10 @@ function App() {
   const [cartItems, setCartItems] = useState([]);
   const [isShaking, setIsShaking] = useState(false)
 
+  const totalPrice = cartItems.length ? cartItems.reduce((acc, curr) => {
+    return acc + curr.price * curr.quantity;
+  }, 0) : 0;
+
   
 
   const handleCartClick = () => {
@@ -68,7 +72,7 @@ function App() {
       <Footer />
       <Cart isOpen={isCartOpen} handleCloseCart={handleCloseCart}
       addItem={handleAddToCart} removeItem={handleRemoveFromCart}
-      cartItems={cartItems} updateQuantity={updateQuantity} />
+      cartItems={cartItems} updateQuantity={updateQuantity} totalPrice={totalPrice} />
     </>
   );
 }
