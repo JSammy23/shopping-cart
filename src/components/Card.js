@@ -1,5 +1,6 @@
 import React from 'react'
 import '../components/styles/Card.Styles.css'
+import { Link } from 'react-router-dom';
 
 const Card = ({ title, image, price, addItem, item }) => {
 
@@ -10,13 +11,17 @@ const Card = ({ title, image, price, addItem, item }) => {
   return (
     <>
       <div className="cardCont">
-        <div className='card' >
-          <img  src={image} alt="Character" className='card-img' />
-          <h2 className='title'>{title}</h2>
-          <p className='price'>${price}</p>
-          <button onClick={handleClick} className='addBtn fill'>Add To Cart</button>
+          <div className='card' >
+            <Link to={`/products/${item.id}`} >
+              <img  src={image} alt="Character" className='card-img' />
+              <h2 className='title'>{title}</h2>
+            </Link>
+            <p className='price'>${price}</p>
+            <div>
+              <button onClick={handleClick} className='addBtn fill'>Add To Cart</button>
+            </div>
+          </div>
         </div>
-      </div>
     </>
   )
 }

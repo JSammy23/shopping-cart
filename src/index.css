@@ -97,6 +97,7 @@ header {
 
 .title {
   color: var(--ac-pink);
+  text-align: center;
 }
 
 /* Home Styling */
@@ -165,4 +166,24 @@ header {
   color: var(--clr-neon);
   cursor: pointer;
   margin-right: .2em;
+}
+
+/* ProductDetails */
+
+.productDetails {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  color: #fff;
+}
+
+.productDetails > img {
+  width: 450px;
+  padding: 2em
+}
+
+.productInfo {
+  font-size: 1.5em;
+  max-width: 500px;
+  
 }

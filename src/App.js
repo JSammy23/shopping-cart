@@ -5,6 +5,8 @@ import Shop from "./pages/Shop";
 import { useState } from "react";
 import Cart from "./components/Cart";
 import Footer from "./components/Footer";
+import ProductDetails from "./components/ProductDetails";
+import inventory from "./data/inventory";
 
 
 
@@ -68,6 +70,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/shop" element={<Shop 
         addItem={handleAddToCart} removeItem={handleRemoveFromCart} />} />
+        <Route path="/products/:id" element={<ProductDetails inventory={inventory} updateQuantity={updateQuantity} /> } />
       </Routes>
       <Footer />
       <Cart isOpen={isCartOpen} handleCloseCart={handleCloseCart}
