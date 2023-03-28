@@ -23,6 +23,7 @@ body {
   background-size: cover;
   height: 100%;
   margin-bottom: 3.5rem;
+  background-color: #000000;
 }
 
 body::-webkit-scrollbar {
@@ -33,6 +34,7 @@ body::-webkit-scrollbar {
 .flex {
   display: flex;
   justify-content: space-around;
+  flex-wrap: wrap
 }
 
 /* Header Styling */
@@ -172,13 +174,14 @@ header {
 
 .productDetails {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: space-around;
   color: #fff;
 }
 
 .productDetails > img {
-  width: 450px;
+  max-width: 450px;
   padding: 2em
 }
 
