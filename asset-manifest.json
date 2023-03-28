@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/shopping-cart/static/css/main.1f25e36b.css",
+    "main.js": "/shopping-cart/static/js/main.af4a78d4.js",
+    "static/media/hex.jpg": "/shopping-cart/static/media/hex.111c653c08a31aa3e865.jpg",
+    "static/media/logo.png": "/shopping-cart/static/media/logo.c99b8402e1bcbf1b5fdb.png",
+    "static/media/gary.webp": "/shopping-cart/static/media/gary.059335b1bcd3eefceb47.webp",
+    "static/media/tie&gown.jpg": "/shopping-cart/static/media/tie&gown.42d7e5b2d4af1ed23a26.jpg",
+    "static/media/youngPuss.avif": "/shopping-cart/static/media/youngPuss.1c54ff737b06c0958a17.avif",
+    "static/media/sweater.avif": "/shopping-cart/static/media/sweater.378b18022a237e4a8c5d.avif",
+    "static/media/wizard.avif": "/shopping-cart/static/media/wizard.6c3e4fcb02781fc3d7a1.avif",
+    "static/media/shades.avif": "/shopping-cart/static/media/shades.5be8c462f9e39dff0064.avif",
+    "index.html": "/shopping-cart/index.html",
+    "main.1f25e36b.css.map": "/shopping-cart/static/css/main.1f25e36b.css.map",
+    "main.af4a78d4.js.map": "/shopping-cart/static/js/main.af4a78d4.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.1f25e36b.css",
+    "static/js/main.af4a78d4.js"
+  ]
+}
